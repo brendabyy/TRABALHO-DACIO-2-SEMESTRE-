@@ -16,6 +16,9 @@ typedef struct {
 // Funcoes do Gerenciador (Penelope)
 void cadastrarRoupa(Carrinho *catalogo);
 void listarRoupas(const Carrinho *catalogo);
+// Funcoes de Arquivo (Luna)
+void salvarRoupas(Roupa roupas[], int quantidade);
+void carregarRoupas(Roupa roupas[], int *quantidade);
 
 
 #endif
