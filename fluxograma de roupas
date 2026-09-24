@@ -1,0 +1,150 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="NQMgNWs0a8kkGr0j7OQZ">
+    <mxGraphModel dx="1703" dy="940" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1652" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" value="Início" vertex="1">
+          <mxGeometry height="60" width="140" x="500" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="carregar" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Carregar roupas do&#xa;arquivo &quot;roupas.txt&quot;" vertex="1">
+          <mxGeometry height="60" width="180" x="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Exibir Menu Principal:&#xa;1 - Cadastrar Roupa&#xa;2 - Listar Roupas&#xa;3 - Otimizar Compras&#xa;0 - Sair" vertex="1">
+          <mxGeometry height="90" width="200" x="470" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="dec_menu" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=13;" value="Opção&#xa;escolhida?" vertex="1">
+          <mxGeometry height="90" width="140" x="500" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="cad_limite" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Catálogo cheio?&#xa;(qtd &gt;= 100)" vertex="1">
+          <mxGeometry height="90" width="140" x="100" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="cad_erro_limite" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Mostrar aviso:&#xa;&quot;Catálogo Cheio&quot;" vertex="1">
+          <mxGeometry height="60" width="130" x="10" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="cad_ler" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Pedir Nome e&#xa;Preço da Roupa" vertex="1">
+          <mxGeometry height="60" width="130" x="200" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="cad_valida" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Preço &gt; 0?" vertex="1">
+          <mxGeometry height="80" width="120" x="205" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="cad_erro_preco" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Mostrar erro:&#xa;&quot;Preço Inválido&quot;" vertex="1">
+          <mxGeometry height="60" width="130" x="360" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="cad_sucesso" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Salvar no catálogo&#xa;e Incrementar qtd" vertex="1">
+          <mxGeometry height="60" width="130" x="200" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="lis_vazio" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Catálogo&#xa;vazio?&#xa;(qtd == 0)" vertex="1">
+          <mxGeometry height="90" width="140" x="500" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="lis_msg_vazio" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Mostrar aviso:&#xa;&quot;Nenhuma roupa&#xa;cadastrada&quot;" vertex="1">
+          <mxGeometry height="60" width="130" x="390" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="lis_exibe" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Exibir tabela com&#xa;todas as roupas&#xa;e preços" vertex="1">
+          <mxGeometry height="60" width="140" x="610" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="oti_pedir" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Pedir Orçamento&#xa;ao usuário" vertex="1">
+          <mxGeometry height="60" width="140" x="880" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="oti_init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="total_gasto = 0&#xa;i = 0" vertex="1">
+          <mxGeometry height="50" width="140" x="880" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="oti_loop" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="Tem próxima&#xa;peça no catálogo?&#xa;(i &lt; qtd)" vertex="1">
+          <mxGeometry height="90" width="160" x="870" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="oti_cabe" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="total_gasto +&#xa;preço &lt;= orçamento?" vertex="1">
+          <mxGeometry height="90" width="180" x="860" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="oti_compra" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Comprar peça:&#xa;total_gasto += preço&#xa;Mostrar item na tela" vertex="1">
+          <mxGeometry height="60" width="160" x="870" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="oti_proximo" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="i = i + 1" vertex="1">
+          <mxGeometry height="40" width="120" x="890" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="oti_resultado" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Exibir Total Gasto&#xa;e Troco (orçamento - total)" vertex="1">
+          <mxGeometry height="60" width="170" x="1080" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="salvar" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Salvar catálogo no&#xa;arquivo &quot;roupas.txt&quot;" vertex="1">
+          <mxGeometry height="60" width="160" x="1100" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="fim" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=14;" value="Fim" vertex="1">
+          <mxGeometry height="60" width="120" x="1300" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" edge="1" parent="1" source="inicio" target="carregar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="carregar" target="menu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" edge="1" parent="1" source="menu" target="dec_menu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_m1" edge="1" parent="1" source="dec_menu" target="cad_limite" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_m2" edge="1" parent="1" source="dec_menu" target="lis_vazio" value="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_m3" edge="1" parent="1" source="dec_menu" target="oti_pedir" value="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_m0" edge="1" parent="1" source="dec_menu" target="salvar" value="0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_cad1" edge="1" parent="1" source="cad_limite" target="cad_erro_limite" value="Sim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_cad2" edge="1" parent="1" source="cad_limite" target="cad_ler" value="Não">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_cad3" edge="1" parent="1" source="cad_ler" target="cad_valida">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_cad4" edge="1" parent="1" source="cad_valida" target="cad_erro_preco" value="Não">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_cad5" edge="1" parent="1" source="cad_valida" target="cad_sucesso" value="Sim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_lis1" edge="1" parent="1" source="lis_vazio" target="lis_msg_vazio" value="Sim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_lis2" edge="1" parent="1" source="lis_vazio" target="lis_exibe" value="Não">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti1" edge="1" parent="1" source="oti_pedir" target="oti_init">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti2" edge="1" parent="1" source="oti_init" target="oti_loop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti3" edge="1" parent="1" source="oti_loop" target="oti_cabe" value="Sim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti4" edge="1" parent="1" source="oti_loop" target="oti_resultado" value="Não">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti5" edge="1" parent="1" source="oti_cabe" target="oti_compra" value="Sim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti6" edge="1" parent="1" source="oti_cabe" target="oti_proximo" value="Não">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti7" edge="1" parent="1" source="oti_compra" target="oti_proximo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c_oti8" edge="1" parent="1" source="oti_proximo" target="oti_loop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="980" />
+              <mxPoint x="810" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c_sair" edge="1" parent="1" source="salvar" target="fim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
