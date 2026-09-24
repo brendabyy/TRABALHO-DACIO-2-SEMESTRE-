@@ -1,5 +1,10 @@
-180.00 Jaqueta-de_Couro
+180.00 Jaqueta_de_Couro
 120.00 Calca_Jeans
 50.00 Camiseta_Basica
 15.00 Par_de_Meias
 65.00 Bermuda
+250.00 Vestido_de_Festa
+89.90 Blusa_Moletom
+45.00 Chapeu_Bucket
+110.00 Tenis_Casual
+35.00 Cinto_de_Couro
