@@ -30,3 +30,23 @@ apresentando o total gasto e o saldo restante.
 
 ## 4. Estrutura de Dados
 *(A ser detalhado por Luna)*
+
+
+##  Divisão de Responsabilidades e Contribuições
+
+Este projeto foi desenvolvido de forma modular e colaborativa pela equipe:
+
+* **Brenda (Líder do Projeto)**:
+  * Criação do arquivo principal (`main.c`) e fluxo do menu interativo.
+  * Implementação da lógica de otimização de orçamento e troco.
+  * Lógica para remoção do último item do carrinho e controle de versão no GitHub.
+
+* **Penélope**:
+  * Criação do módulo de interface e gerenciamento (`gerenciador.c`).
+  * Desenvolvimento da função de cadastro de peças (`cadastrarRoupa`).
+  * Desenvolvimento da função de listagem do catálogo (`listarRoupas`).
+
+* **Luna**:
+  * Definição da estrutura de dados e protótipos de funções no cabeçalho (`roupas.h`).
+  * Estruturação e criação do arquivo base de dados (`roupas.txt`).
+  * Documentação das estruturas (`struct Roupa` e `struct Carrinho`) no README.md.
