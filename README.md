@@ -12,7 +12,21 @@ O programa recebe os preços das peças disponíveis e o valor disponível do us
 4. Caso o orçamento seja insuficiente para os itens selecionados, o sistema exibe uma mensagem de aviso.
 
 ## 3 Fluxograma da Lógica do Sistema
-*(A ser inserido por Penélope)*
+O fluxograma representa o funcionamento geral do
+Sistema Otimizador de Compras de Roupas.
+Inicialmente, o sistema carrega o catálogo de roupas
+armazenado em arquivo e apresenta um menu interativo
+ao usuário.
+Por meio do menu, o usuário pode cadastrar novas peças,
+consultar as roupas disponíveis, realizar a otimização
+das compras com base em um orçamento informado ou
+encerrar o programa.
+No cadastro, o sistema valida os dados informados e
+armazena as roupas no catálogo. Na consulta, apresenta
+as peças cadastradas em formato de tabela.
+Na opção de otimização, o sistema verifica quais peças
+podem ser compradas sem ultrapassar o orçamento,
+apresentando o total gasto e o saldo restante.
 
 ## 4. Estrutura de Dados
 *(A ser detalhado por Luna)*
