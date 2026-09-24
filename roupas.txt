@@ -1,5 +1,5 @@
-180.00 Jaqueta de Couro
-120.00 Calca Jeans
-50.00 Camiseta Basica
-15.00 Par de Meias
+180.00 Jaqueta-de_Couro
+120.00 Calca_Jeans
+50.00 Camiseta_Basica
+15.00 Par_de_Meias
 65.00 Bermuda
