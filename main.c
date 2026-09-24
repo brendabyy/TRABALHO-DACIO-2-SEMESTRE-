@@ -1,3 +1,7 @@
+/*
+ * Integrante Responsavel: Brenda
+ * Funcao: Controller principal, Menu e Otimizacao de Orcamento
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include "roupas.h"
@@ -8,6 +12,17 @@ int main() {
     int opcao;
     float orcamento, total_gasto;
     int i;
+
+    // Carrega os dados iniciais do arquivo roupas.txt se ele existir
+    FILE *arquivo = fopen("roupas.txt", "r");
+    if (arquivo != NULL) {
+        while (fscanf(arquivo, "%f %s", &catalogo.itens[catalogo.quantidade].preco, 
+                      catalogo.itens[catalogo.quantidade].nome) != EOF) {
+            catalogo.quantidade++;
+            if (catalogo.quantidade >= MAX_ROUPAS) break;
+        }
+        fclose(arquivo);
+    }
 
     do {
         printf("\n=== SISTEMA OTIMIZADOR DE COMPRAS ===\n");
@@ -21,12 +36,10 @@ int main() {
 
         switch (opcao) {
             case 1:
-                // Chama a funcao original da Penelope sem alterar o codigo dela
                 cadastrarRoupa(&catalogo);
                 break;
 
             case 2:
-                // Apaga a ultima roupa inserida
                 if (catalogo.quantidade > 0) {
                     catalogo.quantidade--;
                     printf("\nUltima roupa removida com sucesso!\n");
@@ -36,7 +49,6 @@ int main() {
                 break;
 
             case 3:
-                // Chama a funcao original da Penelope
                 listarRoupas(&catalogo);
                 break;
 
@@ -49,14 +61,16 @@ int main() {
                     scanf("%f", &orcamento);
 
                     total_gasto = 0.0;
-                    printf("\nItens selecionados:\n");
+                    printf("\nItens selecionados dentro do orcamento:\n");
                     for (i = 0; i < catalogo.quantidade; i++) {
                         if (total_gasto + catalogo.itens[i].preco <= orcamento) {
                             total_gasto += catalogo.itens[i].preco;
                             printf("- %s: R$ %.2f\n", catalogo.itens[i].nome, catalogo.itens[i].preco);
                         }
                     }
-                    printf("Total gasto: R$ %.2f | Troco: R$ %.2f\n", total_gasto, orcamento - total_gasto);
+                    printf("-----------------------------------\n");
+                    printf("Total gasto : R$ %.2f\n", total_gasto);
+                    printf("Troco       : R$ %.2f\n", orcamento - total_gasto);
                 }
                 break;
 
