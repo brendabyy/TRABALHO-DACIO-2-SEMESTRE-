@@ -1,49 +1,73 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "roupas.h"
 
 int main() {
-    // Declaracao das variaveis
-    FILE *arquivo;
-    float preco;
-    char nome_peca[50];
-    float orcamento;
-    float total_gasto = 0.0;
+    Carrinho catalogo;
+    catalogo.quantidade = 0;
+    int opcao;
+    float orcamento, total_gasto;
+    int i;
 
-    printf("=== OTIMIZADOR DE COMPRAS ===\n\n");
+    do {
+        printf("\n=== SISTEMA OTIMIZADOR DE COMPRAS ===\n");
+        printf("1. Cadastrar nova roupa\n");
+        printf("2. Remover ultima roupa cadastrada\n");
+        printf("3. Listar catalogo\n");
+        printf("4. Otimizar compras (usar orcamento)\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
 
-    // Pedir o orcamento ao usuario
-    printf("Digite quanto dinheiro voce tem: R$ ");
-    scanf("%f", &orcamento);
+        switch (opcao) {
+            case 1:
+                // Chama a funcao original da Penelope sem alterar o codigo dela
+                cadastrarRoupa(&catalogo);
+                break;
 
-    // Abrir o arquivo de roupas para leitura
-    arquivo = fopen("roupas.txt", "r");
+            case 2:
+                // Apaga a ultima roupa inserida
+                if (catalogo.quantidade > 0) {
+                    catalogo.quantidade--;
+                    printf("\nUltima roupa removida com sucesso!\n");
+                } else {
+                    printf("\nO catalogo ja esta vazio!\n");
+                }
+                break;
 
-    // Verificar se o arquivo existe
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo roupas.txt!\n");
-        system("pause");
-        return 1;
-    }
+            case 3:
+                // Chama a funcao original da Penelope
+                listarRoupas(&catalogo);
+                break;
 
-    printf("\n--- ITENS COMPRADOS ---\n");
+            case 4:
+                printf("\n--- OTIMIZACAO DE COMPRAS ---\n");
+                if (catalogo.quantidade == 0) {
+                    printf("Cadastre pelo menos uma roupa primeiro!\n");
+                } else {
+                    printf("Digite seu orcamento: R$ ");
+                    scanf("%f", &orcamento);
 
-    // Ler o arquivo linha por linha ate o final
-    while (fscanf(arquivo, "%f %s", &preco, nome_peca) != EOF) {
-        // Se o preco da roupa couber no orcamento
-        if (total_gasto + preco <= orcamento) {
-            total_gasto = total_gasto + preco;
-            printf("- %s: R$ %.2f\n", nome_peca, preco);
+                    total_gasto = 0.0;
+                    printf("\nItens selecionados:\n");
+                    for (i = 0; i < catalogo.quantidade; i++) {
+                        if (total_gasto + catalogo.itens[i].preco <= orcamento) {
+                            total_gasto += catalogo.itens[i].preco;
+                            printf("- %s: R$ %.2f\n", catalogo.itens[i].nome, catalogo.itens[i].preco);
+                        }
+                    }
+                    printf("Total gasto: R$ %.2f | Troco: R$ %.2f\n", total_gasto, orcamento - total_gasto);
+                }
+                break;
+
+            case 0:
+                printf("Saindo do programa...\n");
+                break;
+
+            default:
+                printf("Opcao invalida!\n");
         }
-    }
+    } while (opcao != 0);
 
-    // Fechar o arquivo
-    fclose(arquivo);
-
-    // Mostrar o total e o troco
-    printf("\n-------------------------\n");
-    printf("Total gasto: R$ %.2f\n", total_gasto);
-    printf("Troco: R$ %.2f\n", orcamento - total_gasto);
-
-    system("pause");
     return 0;
 }
