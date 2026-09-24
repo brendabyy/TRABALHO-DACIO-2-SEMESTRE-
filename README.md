@@ -29,7 +29,6 @@ podem ser compradas sem ultrapassar o orçamento,
 apresentando o total gasto e o saldo restante.
 
 ## 4. Estrutura de Dados
-4. Estrutura de Dados
 
 O sistema utiliza estruturas (struct) para organizar as informações das roupas cadastradas.
 
