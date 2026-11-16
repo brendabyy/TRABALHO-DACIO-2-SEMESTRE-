@@ -75,6 +75,7 @@ int main() {
                 break;
 
             case 0:
+                salvarRoupas(catalogo.itens, catalogo.quantidade);
                 printf("Saindo do programa...\n");
                 break;
 
